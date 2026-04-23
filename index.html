@@ -1,34 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Ouro Digital – Conectando Riqueza. Agência de marketing digital, tráfego pago, criação de sites e automações de IA em Goiânia. +5.000 empresas. Desde 2018."/>
+  <meta name="description" content="Ouro Digital – Conectando Riqueza. Agência de marketing digital, tráfego pago, sites e automações de IA em Goiânia."/>
   <title>Ouro Digital – Conectando Riqueza</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
+  <!-- CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <!-- CONTROLS -->
+  <div id="controls">
+    <button id="themeBtn" aria-label="Alternar tema">
+      <svg id="iconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg id="iconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button id="langBtn">PT</button>
+  </div>
+
   <!-- NAV -->
   <nav id="nav">
-    <div class="nav-wrap">
-      <a href="#" class="nav-logo">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo-link">
         <img src="assets/logo.png" alt="Ouro Digital" class="nav-logo-img"/>
       </a>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#solucoes">Soluções</a></li>
-        <li><a href="#portfolio">Portfólio</a></li>
-        <li><a href="#planos">Planos</a></li>
-        <li><a href="#sobre">Sobre</a></li>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#solucoes" data-t="nav_sol">Soluções</a></li>
+        <li><a href="#portfolio" data-t="nav_port">Portfólio</a></li>
+        <li><a href="#planos" data-t="nav_plans">Planos</a></li>
+        <li><a href="#sobre" data-t="nav_about">Sobre</a></li>
         <li>
-          <a href="https://wa.me/5562984924326?text=Ol%C3%A1!%20Quero%20solicitar%20minha%20avalia%C3%A7%C3%A3o%20gratuita%20%F0%9F%92%B0"
-             class="nav-cta" target="_blank" rel="noopener">Avaliação gratuita</a>
+          <a href="https://wa.me/5562984924326?text=Ol%C3%A1%21%20Quero%20criar%20meu%20site%20agora%20%F0%9F%92%BB"
+             class="nav-cta" data-t="nav_cta" target="_blank" rel="noopener">
+            Criar meu site agora
+          </a>
         </li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -36,111 +51,135 @@
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-bg">
-      <div class="hero-grid"></div>
-      <div class="hero-glow"></div>
+    <canvas id="starfield"></canvas>
+    <div class="hero-logo-wrap" id="heroLogoWrap">
+      <img src="assets/logo.png" alt="Ouro Digital" id="heroLogo" class="hero-logo-bg"/>
     </div>
-    <div class="hero-body">
-      <div class="hero-logo-wrap" data-reveal>
-        <img src="assets/logo.png" alt="Ouro Digital – Conectando Riqueza" class="hero-logo"/>
+    <div class="hero-content">
+      <div class="hero-pill" data-reveal>
+        <span class="pill-dot"></span>
+        <span data-t="hero_pill">Agência Digital · Goiânia · Desde 2018</span>
       </div>
-      <div class="hero-text" data-reveal data-delay="200">
-        <h1>Sua empresa em<br/><em>primeiro lugar</em> no digital.</h1>
-        <p>Marketing digital, tráfego pago, sites e automações de IA.<br/>Entrega em até <strong>3 dias úteis</strong>. Goiânia · Todo o Brasil.</p>
-      </div>
-      <div class="hero-actions" data-reveal data-delay="400">
-        <a href="https://wa.me/5562984924326?text=Ol%C3%A1!%20Quero%20solicitar%20minha%20avalia%C3%A7%C3%A3o%20gratuita%20na%20Ouro%20Digital%20%F0%9F%92%B0"
-           class="btn-gold" target="_blank" rel="noopener">
+      <h1 class="hero-h1" data-reveal data-delay="120">
+        <span data-t-html="hero_h1">Sua empresa em <em>primeiro lugar</em> no digital.</span>
+      </h1>
+      <p class="hero-sub" data-reveal data-delay="240">
+        <span data-t-html="hero_sub">Marketing, tráfego pago, sites e automações de IA.<br/>Entrega em até <strong>3 dias úteis</strong>.</span>
+      </p>
+      <div class="hero-btns" data-reveal data-delay="360">
+        <a href="https://wa.me/5562984924326?text=Ol%C3%A1%21%20Quero%20solicitar%20minha%20avalia%C3%A7%C3%A3o%20gratuita%20%F0%9F%92%B0"
+           class="btn-primary" target="_blank" rel="noopener" data-t="hero_cta1">
           Solicitar avaliação gratuita
         </a>
-        <a href="#portfolio" class="btn-ghost">Ver portfólio ↓</a>
+        <a href="#portfolio" class="btn-ghost" data-t="hero_cta2">Ver portfólio ↓</a>
       </div>
     </div>
-    <div class="hero-stats" data-reveal data-delay="600">
-      <div class="stat"><strong>5.000+</strong><span>empresas atendidas</span></div>
-      <div class="stat-line"></div>
-      <div class="stat"><strong>8 anos</strong><span>de mercado</span></div>
-      <div class="stat-line"></div>
-      <div class="stat"><strong>3 dias</strong><span>prazo de entrega</span></div>
-      <div class="stat-line"></div>
-      <div class="stat"><strong>24/7</strong><span>automação com IA</span></div>
+    <div class="hero-stats" data-reveal data-delay="480">
+      <div class="hstat"><b>5.000+</b><span data-t="stat1">empresas atendidas</span></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><b>8 <span data-t="stat2_unit">anos</span></b><span data-t="stat2">de mercado</span></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><b>3 <span data-t="stat3_unit">dias</span></b><span data-t="stat3">prazo de entrega</span></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><b>24/7</b><span data-t="stat4">automação com IA</span></div>
     </div>
   </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker" id="ticker">
+      <span>Tráfego Pago</span><span class="tick-dot">◆</span>
+      <span>Sites & Landing Pages</span><span class="tick-dot">◆</span>
+      <span>Automação IA</span><span class="tick-dot">◆</span>
+      <span>Social Media</span><span class="tick-dot">◆</span>
+      <span>Filmmaker</span><span class="tick-dot">◆</span>
+      <span>Software Sob Medida</span><span class="tick-dot">◆</span>
+      <span>Conteúdo Digital</span><span class="tick-dot">◆</span>
+      <span>Tráfego Pago</span><span class="tick-dot">◆</span>
+      <span>Sites & Landing Pages</span><span class="tick-dot">◆</span>
+      <span>Automação IA</span><span class="tick-dot">◆</span>
+      <span>Social Media</span><span class="tick-dot">◆</span>
+      <span>Filmmaker</span><span class="tick-dot">◆</span>
+      <span>Software Sob Medida</span><span class="tick-dot">◆</span>
+      <span>Conteúdo Digital</span><span class="tick-dot">◆</span>
+    </div>
+  </div>
 
   <!-- SOLUÇÕES -->
   <section id="solucoes">
     <div class="wrap">
-      <header class="sec-header" data-reveal>
-        <span class="label">O que fazemos</span>
-        <h2>Soluções que<br/><em>geram resultado</em></h2>
+      <header class="sec-head" data-reveal>
+        <div class="sec-label" data-t="sol_label">O que fazemos</div>
+        <h2 data-t-html="sol_h2">Soluções que <em>geram resultado</em></h2>
       </header>
       <div class="sol-grid">
-        <div class="sol-card" data-reveal>
-          <div class="sol-num">01</div>
-          <div class="sol-icon">📈</div>
-          <h3>Tráfego Pago</h3>
-          <p>Google, Meta e TikTok Ads. Campanhas que colocam sua marca no topo da busca e geram clientes reais.</p>
-        </div>
-        <div class="sol-card" data-reveal>
-          <div class="sol-num">02</div>
-          <div class="sol-icon">💻</div>
-          <h3>Sites & Landing Pages</h3>
-          <p>Do painel de preços para TV de um açougue ao e-commerce de luxo. Entregamos em até 3 dias úteis.</p>
-        </div>
-        <div class="sol-card" data-reveal>
-          <div class="sol-num">03</div>
-          <div class="sol-icon">🤖</div>
-          <h3>Automação de IA</h3>
-          <p>Atendimento inteligente no WhatsApp 24h por dia, 7 dias por semana. Nunca perca um cliente.</p>
-        </div>
-        <div class="sol-card" data-reveal>
-          <div class="sol-num">04</div>
-          <div class="sol-icon">📱</div>
-          <h3>Social Media IA</h3>
-          <p>90 posts mensais no Instagram gerenciados por inteligência artificial. Presença constante, sem esforço.</p>
-        </div>
-        <div class="sol-card" data-reveal>
-          <div class="sol-num">05</div>
-          <div class="sol-icon">🎬</div>
-          <h3>Filmmaker & Conteúdo</h3>
-          <p>Equipe criativa para vídeos, fotos e campanhas visuais que convertem nas redes sociais.</p>
-        </div>
-        <div class="sol-card" data-reveal>
-          <div class="sol-num">06</div>
-          <div class="sol-icon">🔧</div>
-          <h3>Software Sob Medida</h3>
-          <p>Sistemas personalizados para qualquer porte de empresa — pequena, média ou grande.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- PROCESSO -->
-  <section id="processo">
-    <div class="wrap">
-      <header class="sec-header" data-reveal>
-        <span class="label">Como trabalhamos</span>
-        <h2>Do contato à entrega<br/><em>em 3 dias úteis</em></h2>
-      </header>
-      <div class="proc-steps">
-        <div class="proc-step" data-reveal>
-          <div class="proc-circle">01</div>
-          <div class="proc-line"></div>
-          <h4>Avaliação gratuita</h4>
-          <p>Nossa equipe analisa o seu negócio e verifica se ele se enquadra nos nossos parâmetros de atendimento.</p>
+        <div class="sol-card" data-reveal data-service="trafego">
+          <div class="sol-canvas-wrap">
+            <canvas class="svc-canvas" data-scene="trafego"></canvas>
+          </div>
+          <div class="sol-body">
+            <div class="sol-num">01</div>
+            <h3 data-t="sol1_h">Tráfego Pago</h3>
+            <p data-t="sol1_p">Google, Meta e TikTok Ads. Campanhas que colocam sua marca no topo e geram clientes reais.</p>
+          </div>
         </div>
-        <div class="proc-step" data-reveal>
-          <div class="proc-circle">02</div>
-          <div class="proc-line"></div>
-          <h4>Estratégia sob medida</h4>
-          <p>Desenvolvemos um plano personalizado com campanhas, conteúdo, site e automação alinhados ao seu mercado.</p>
+
+        <div class="sol-card" data-reveal data-service="sites">
+          <div class="sol-canvas-wrap">
+            <canvas class="svc-canvas" data-scene="sites"></canvas>
+          </div>
+          <div class="sol-body">
+            <div class="sol-num">02</div>
+            <h3 data-t="sol2_h">Sites & Landing Pages</h3>
+            <p data-t="sol2_p">Do painel de preços para TV ao e-commerce de luxo. Entrega em até 3 dias úteis.</p>
+          </div>
         </div>
-        <div class="proc-step" data-reveal>
-          <div class="proc-circle">03</div>
-          <div class="proc-line last"></div>
-          <h4>Entrega & resultados</h4>
-          <p>Todo o material entregue em até 3 dias úteis. Você ativa e começa a colher resultados imediatamente.</p>
+
+        <div class="sol-card" data-reveal data-service="automacao">
+          <div class="sol-canvas-wrap">
+            <canvas class="svc-canvas" data-scene="automacao"></canvas>
+          </div>
+          <div class="sol-body">
+            <div class="sol-num">03</div>
+            <h3 data-t="sol3_h">Automação de IA</h3>
+            <p data-t="sol3_p">Atendimento inteligente no WhatsApp 24h por dia, 7 dias por semana.</p>
+          </div>
         </div>
+
+        <div class="sol-card" data-reveal data-service="social">
+          <div class="sol-canvas-wrap">
+            <canvas class="svc-canvas" data-scene="social"></canvas>
+          </div>
+          <div class="sol-body">
+            <div class="sol-num">04</div>
+            <h3 data-t="sol4_h">Social Media IA</h3>
+            <p data-t="sol4_p">90 posts mensais no Instagram com inteligência artificial. Presença constante.</p>
+          </div>
+        </div>
+
+        <div class="sol-card" data-reveal data-service="filmmaker">
+          <div class="sol-canvas-wrap">
+            <canvas class="svc-canvas" data-scene="filmmaker"></canvas>
+          </div>
+          <div class="sol-body">
+            <div class="sol-num">05</div>
+            <h3 data-t="sol5_h">Filmmaker & Conteúdo</h3>
+            <p data-t="sol5_p">Equipe criativa para vídeos, fotos e campanhas que convertem.</p>
+          </div>
+        </div>
+
+        <div class="sol-card" data-reveal data-service="software">
+          <div class="sol-canvas-wrap">
+            <canvas class="svc-canvas" data-scene="software"></canvas>
+          </div>
+          <div class="sol-body">
+            <div class="sol-num">06</div>
+            <h3 data-t="sol6_h">Software Sob Medida</h3>
+            <p data-t="sol6_p">Sistemas personalizados para qualquer porte — do açougue à clínica odontológica.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -148,117 +187,127 @@
   <!-- PORTFÓLIO -->
   <section id="portfolio">
     <div class="wrap">
-      <header class="sec-header" data-reveal>
-        <span class="label">Portfólio</span>
-        <h2>Sites que já<br/><em>entregamos</em></h2>
-        <p>Cada site é único. Escolha o modelo que mais combina com o seu negócio — ou criamos do zero.</p>
+      <header class="sec-head" data-reveal>
+        <div class="sec-label" data-t="port_label">Portfólio</div>
+        <h2 data-t-html="port_h2">Sites que já <em>entregamos</em></h2>
+        <p data-t="port_sub">Cada projeto é único. Deslize para ver todos.</p>
       </header>
-      <div class="port-grid">
+    </div>
+    <div class="slider-outer">
+      <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Anterior">‹</button>
+      <div class="slider-track-wrap" id="sliderTrack">
+        <div class="slider-track">
 
-        <a href="https://ramiresvendas.vercel.app" target="_blank" rel="noopener" class="port-card" data-reveal>
-          <div class="port-thumb" style="--c1:#0a0a0a;--c2:#2a1a00;--c3:#D4AF37;">
-            <span class="port-emoji">📱</span>
-            <div class="port-hover-overlay">
-              <span>Acessar site →</span>
+          <div class="slide-card">
+            <div class="slide-thumb" style="--gc1:#0a0a0a;--gc2:#2a1a00;--gc3:#D4AF37;">
+              <img src="assets/logos/ramiresvendas.jpg" alt="Ramires Vendas" class="slide-logo" onerror="this.style.display='none'"/>
+              <span class="slide-emoji-fb">📱</span>
+            </div>
+            <div class="slide-info">
+              <span class="slide-cat" data-t="port_cat_ecom">E-Commerce · Luxo</span>
+              <h4>Ramires Vendas</h4>
+              <p data-t="port1_p">iPhones banhados a ouro 24KT. Multilíngue PT/EN/AR.</p>
+              <a href="https://ramiresvendas.vercel.app" target="_blank" rel="noopener" class="slide-btn" data-t="port_btn">Ver site →</a>
             </div>
           </div>
-          <div class="port-meta">
-            <div class="port-tag">E-Commerce · Luxo</div>
-            <h4>Ramires Vendas</h4>
-            <p>iPhones banhados a ouro 24KT. Multilíngue PT/EN/AR, carrinho e tema escuro.</p>
-          </div>
-        </a>
 
-        <a href="https://reidominoxidilgoiania.vercel.app" target="_blank" rel="noopener" class="port-card" data-reveal>
-          <div class="port-thumb" style="--c1:#0d1a0d;--c2:#1a3d1a;--c3:#2ecc71;">
-            <span class="port-emoji">💆</span>
-            <div class="port-hover-overlay"><span>Acessar site →</span></div>
+          <div class="slide-card">
+            <div class="slide-thumb" style="--gc1:#0d1a0d;--gc2:#1a3d1a;--gc3:#2ecc71;">
+              <div class="slide-brand-logo" style="color:#2ecc71;">RDM</div>
+            </div>
+            <div class="slide-info">
+              <span class="slide-cat">E-Commerce · Beleza</span>
+              <h4>Rei do Minoxidil</h4>
+              <p data-t="port2_p">Produtos para barba. Design focado em conversão.</p>
+              <a href="https://reidominoxidilgoiania.vercel.app" target="_blank" rel="noopener" class="slide-btn" data-t="port_btn">Ver site →</a>
+            </div>
           </div>
-          <div class="port-meta">
-            <div class="port-tag">E-Commerce · Beleza</div>
-            <h4>Rei do Minoxidil</h4>
-            <p>Produtos para barba e cabelo. Design focado em conversão e WhatsApp.</p>
-          </div>
-        </a>
 
-        <a href="https://coracao-na-rua.vercel.app" target="_blank" rel="noopener" class="port-card" data-reveal>
-          <div class="port-thumb" style="--c1:#0a0520;--c2:#1a0a3d;--c3:#7c3aed;">
-            <span class="port-emoji">❤️</span>
-            <div class="port-hover-overlay"><span>Acessar site →</span></div>
+          <div class="slide-card">
+            <div class="slide-thumb" style="--gc1:#0a0520;--gc2:#1a0a3d;--gc3:#7c3aed;">
+              <div class="slide-brand-logo" style="color:#a78bfa;">❤️</div>
+            </div>
+            <div class="slide-info">
+              <span class="slide-cat">ONG · Social</span>
+              <h4>Coração na Rua</h4>
+              <p data-t="port3_p">ONG comunitária. Captação de voluntários.</p>
+              <a href="https://coracao-na-rua.vercel.app" target="_blank" rel="noopener" class="slide-btn" data-t="port_btn">Ver site →</a>
+            </div>
           </div>
-          <div class="port-meta">
-            <div class="port-tag">ONG · Social</div>
-            <h4>Coração na Rua</h4>
-            <p>ONG comunitária. Captação de voluntários e doações com presença digital.</p>
-          </div>
-        </a>
 
-        <a href="https://samuca-carnes.vercel.app" target="_blank" rel="noopener" class="port-card" data-reveal>
-          <div class="port-thumb" style="--c1:#1a0808;--c2:#3d1010;--c3:#e53e3e;">
-            <span class="port-emoji">🥩</span>
-            <div class="port-hover-overlay"><span>Acessar site →</span></div>
+          <div class="slide-card">
+            <div class="slide-thumb" style="--gc1:#1a0808;--gc2:#3d1010;--gc3:#e53e3e;">
+              <div class="slide-brand-logo" style="color:#fc8181;">🥩</div>
+            </div>
+            <div class="slide-info">
+              <span class="slide-cat">Alimentação · Delivery</span>
+              <h4>Samuca Carnes</h4>
+              <p data-t="port4_p">Açougue premium com catálogo e pedido via WPP.</p>
+              <a href="https://samuca-carnes.vercel.app" target="_blank" rel="noopener" class="slide-btn" data-t="port_btn">Ver site →</a>
+            </div>
           </div>
-          <div class="port-meta">
-            <div class="port-tag">Alimentação · Delivery</div>
-            <h4>Samuca Carnes</h4>
-            <p>Açougue premium com catálogo, delivery e pedido via WhatsApp.</p>
-          </div>
-        </a>
 
-        <a href="https://barbearia-arantes.vercel.app" target="_blank" rel="noopener" class="port-card" data-reveal>
-          <div class="port-thumb" style="--c1:#0a0a08;--c2:#1a1808;--c3:#d4a017;">
-            <span class="port-emoji">✂️</span>
-            <div class="port-hover-overlay"><span>Acessar site →</span></div>
+          <div class="slide-card">
+            <div class="slide-thumb" style="--gc1:#0a0a08;--gc2:#1a1808;--gc3:#d4a017;">
+              <div class="slide-brand-logo" style="color:#fbbf24;">✂️</div>
+            </div>
+            <div class="slide-info">
+              <span class="slide-cat">Serviços · Barbearia</span>
+              <h4>Barbearia Arantes</h4>
+              <p data-t="port5_p">Barbearia masculina com agendamento online.</p>
+              <a href="https://barbearia-arantes.vercel.app" target="_blank" rel="noopener" class="slide-btn" data-t="port_btn">Ver site →</a>
+            </div>
           </div>
-          <div class="port-meta">
-            <div class="port-tag">Serviços · Barbearia</div>
-            <h4>Barbearia Arantes</h4>
-            <p>Barbearia masculina com agendamento, galeria e integração WhatsApp.</p>
-          </div>
-        </a>
 
-        <a href="https://supermercado-treviso.vercel.app" target="_blank" rel="noopener" class="port-card" data-reveal>
-          <div class="port-thumb" style="--c1:#080a1a;--c2:#101a3d;--c3:#3b82f6;">
-            <span class="port-emoji">🛒</span>
-            <div class="port-hover-overlay"><span>Acessar site →</span></div>
+          <div class="slide-card">
+            <div class="slide-thumb" style="--gc1:#080a1a;--gc2:#101a3d;--gc3:#3b82f6;">
+              <div class="slide-brand-logo" style="color:#60a5fa;">🛒</div>
+            </div>
+            <div class="slide-info">
+              <span class="slide-cat">Varejo · Painel TV</span>
+              <h4>Supermercado Treviso</h4>
+              <p data-t="port6_p">Painel de preços dinâmico para televisão.</p>
+              <a href="https://supermercado-treviso.vercel.app" target="_blank" rel="noopener" class="slide-btn" data-t="port_btn">Ver site →</a>
+            </div>
           </div>
-          <div class="port-meta">
-            <div class="port-tag">Varejo · Painel TV</div>
-            <h4>Supermercado Treviso</h4>
-            <p>Painel de preços dinâmico para exibição em televisão. Atualização em tempo real.</p>
-          </div>
-        </a>
 
-        <a href="https://projeto-renascer-goiania.vercel.app" target="_blank" rel="noopener" class="port-card" data-reveal>
-          <div class="port-thumb" style="--c1:#0a1208;--c2:#162010;--c3:#22c55e;">
-            <span class="port-emoji">🌱</span>
-            <div class="port-hover-overlay"><span>Acessar site →</span></div>
+          <div class="slide-card">
+            <div class="slide-thumb" style="--gc1:#0a1208;--gc2:#162010;--gc3:#22c55e;">
+              <div class="slide-brand-logo" style="color:#86efac;">🌱</div>
+            </div>
+            <div class="slide-info">
+              <span class="slide-cat">Social · Institucional</span>
+              <h4>Projeto Renascer</h4>
+              <p data-t="port7_p">Projeto social em Goiânia. Missão e eventos.</p>
+              <a href="https://projeto-renascer-goiania.vercel.app" target="_blank" rel="noopener" class="slide-btn" data-t="port_btn">Ver site →</a>
+            </div>
           </div>
-          <div class="port-meta">
-            <div class="port-tag">Social · Institucional</div>
-            <h4>Projeto Renascer</h4>
-            <p>Projeto social em Goiânia. Missão, equipe, eventos e formulário de adesão.</p>
-          </div>
-        </a>
 
-        <a href="https://rede-xglobal.vercel.app" target="_blank" rel="noopener" class="port-card" data-reveal>
-          <div class="port-thumb" style="--c1:#080808;--c2:#1a0808;--c3:#f97316;">
-            <span class="port-emoji">🚀</span>
-            <div class="port-hover-overlay"><span>Acessar site →</span></div>
+          <div class="slide-card">
+            <div class="slide-thumb" style="--gc1:#080808;--gc2:#1a0808;--gc3:#f97316;">
+              <div class="slide-brand-logo" style="color:#fb923c;">🚀</div>
+            </div>
+            <div class="slide-info">
+              <span class="slide-cat">Agência · Branding</span>
+              <h4>Rede X Global</h4>
+              <p data-t="port8_p">Agência de marketing digital e branding.</p>
+              <a href="https://rede-xglobal.vercel.app" target="_blank" rel="noopener" class="slide-btn" data-t="port_btn">Ver site →</a>
+            </div>
           </div>
-          <div class="port-meta">
-            <div class="port-tag">Agência · Branding</div>
-            <h4>Rede X Global</h4>
-            <p>Agência de marketing digital. Portfólio, serviços e captação de clientes.</p>
-          </div>
-        </a>
 
+        </div>
       </div>
+      <button class="slider-btn slider-next" id="sliderNext" aria-label="Próximo">›</button>
+    </div>
+    <div class="slider-dots" id="sliderDots"></div>
 
-      <div class="port-cta" data-reveal>
-        <p>Quer um site para o seu negócio?</p>
-        <a href="https://wa.me/5562984924326?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20Ouro%20Digital%20e%20quero%20criar%20o%20meu%20site%20%F0%9F%92%BB"
-           class="btn-gold" target="_blank" rel="noopener">Quero meu site agora →</a>
+    <div class="wrap">
+      <div class="port-cta-bar" data-reveal>
+        <span data-t="port_cta_text">Quer um site para o seu negócio?</span>
+        <a href="https://wa.me/5562984924326?text=Ol%C3%A1%21%20Vi%20o%20portf%C3%B3lio%20da%20Ouro%20Digital%20e%20quero%20criar%20meu%20site%20%F0%9F%92%BB"
+           class="btn-primary" target="_blank" rel="noopener" data-t="port_cta_btn">
+          Criar meu site agora →
+        </a>
       </div>
     </div>
   </section>
@@ -266,56 +315,67 @@
   <!-- PLANOS -->
   <section id="planos">
     <div class="wrap">
-      <header class="sec-header" data-reveal>
-        <span class="label">Investimento</span>
-        <h2>Planos que<br/><em>fazem sua empresa crescer</em></h2>
-        <p>A partir de R$ 1.000/mês. Tudo incluso para você focar só nos resultados.</p>
+      <header class="sec-head" data-reveal>
+        <div class="sec-label" data-t="plans_label">Investimento</div>
+        <h2 data-t-html="plans_h2">Planos que <em>fazem sua empresa crescer</em></h2>
+        <p data-t="plans_sub">A partir de R$ 1.000/mês. Tudo incluso.</p>
       </header>
-      <div class="plans-wrap">
+      <div class="plans-grid">
 
-        <div class="plan-card" data-reveal>
-          <span class="plan-name">Essencial</span>
-          <div class="plan-price"><small>a partir de</small> R$ 1.000 <span>/mês</span></div>
+        <div class="plan" data-reveal>
+          <div class="plan-name" data-t="plan1_name">Essencial</div>
+          <div class="plan-price">
+            <small data-t="plan_from">a partir de</small>
+            <strong>R$ 1.000</strong>
+            <span data-t="plan_month">/mês</span>
+          </div>
           <ul>
-            <li>90 posts mensais no Instagram</li>
-            <li>Gestão com IA automatizada</li>
-            <li>Identidade visual</li>
-            <li>Relatório mensal de resultados</li>
-            <li>Suporte via WhatsApp</li>
+            <li data-t="plan1_f1">90 posts mensais no Instagram</li>
+            <li data-t="plan1_f2">Gestão com IA automatizada</li>
+            <li data-t="plan1_f3">Identidade visual</li>
+            <li data-t="plan1_f4">Relatório mensal</li>
+            <li data-t="plan1_f5">Suporte via WhatsApp</li>
           </ul>
-          <a href="https://wa.me/5562984924326?text=Ol%C3%A1!%20Quero%20o%20plano%20Essencial%20da%20Ouro%20Digital%20%F0%9F%92%B0"
-             class="plan-btn" target="_blank" rel="noopener">Começar agora</a>
+          <a href="https://wa.me/5562984924326?text=Quero%20o%20plano%20Essencial%20%F0%9F%92%B0"
+             class="plan-btn" target="_blank" rel="noopener" data-t="plan_start">Começar agora</a>
         </div>
 
-        <div class="plan-card plan-featured" data-reveal>
-          <div class="plan-badge">Mais escolhido</div>
-          <span class="plan-name">Profissional</span>
-          <div class="plan-price"><small>a partir de</small> R$ 2.500 <span>/mês</span></div>
+        <div class="plan plan-gold" data-reveal>
+          <div class="plan-top-badge" data-t="plan_best">Mais escolhido</div>
+          <div class="plan-name" data-t="plan2_name">Profissional</div>
+          <div class="plan-price">
+            <small data-t="plan_from">a partir de</small>
+            <strong>R$ 2.500</strong>
+            <span data-t="plan_month">/mês</span>
+          </div>
           <ul>
-            <li>Tudo do plano Essencial</li>
-            <li>Tráfego pago Google + Meta</li>
-            <li>Site profissional incluso</li>
-            <li>Automação WhatsApp com IA</li>
-            <li>Filmmaker — 1 vídeo por mês</li>
-            <li>Entrega em até 3 dias úteis</li>
+            <li data-t="plan2_f1">Tudo do plano Essencial</li>
+            <li data-t="plan2_f2">Tráfego pago Google + Meta</li>
+            <li data-t="plan2_f3">Site profissional incluso</li>
+            <li data-t="plan2_f4">Automação WhatsApp IA</li>
+            <li data-t="plan2_f5">Filmmaker — 1 vídeo/mês</li>
+            <li data-t="plan2_f6">Entrega em 3 dias úteis</li>
           </ul>
-          <a href="https://wa.me/5562984924326?text=Ol%C3%A1!%20Quero%20o%20plano%20Profissional%20da%20Ouro%20Digital%20%F0%9F%92%B0"
-             class="plan-btn plan-btn-gold" target="_blank" rel="noopener">Começar agora</a>
+          <a href="https://wa.me/5562984924326?text=Quero%20o%20plano%20Profissional%20%F0%9F%92%B0"
+             class="plan-btn plan-btn-gold" target="_blank" rel="noopener" data-t="plan_start">Começar agora</a>
         </div>
 
-        <div class="plan-card" data-reveal>
-          <span class="plan-name">Enterprise</span>
-          <div class="plan-price"><small>sob consulta</small> Personalizado</div>
+        <div class="plan" data-reveal>
+          <div class="plan-name" data-t="plan3_name">Enterprise</div>
+          <div class="plan-price">
+            <small data-t="plan3_consult">sob consulta</small>
+            <strong data-t="plan3_custom">Personalizado</strong>
+          </div>
           <ul>
-            <li>Tudo do plano Profissional</li>
-            <li>Software sob medida</li>
-            <li>IA 24/7 multicanal</li>
-            <li>Equipe dedicada</li>
-            <li>Reuniões estratégicas</li>
-            <li>SLA e entrega garantida</li>
+            <li data-t="plan3_f1">Tudo do plano Profissional</li>
+            <li data-t="plan3_f2">Software sob medida</li>
+            <li data-t="plan3_f3">IA 24/7 multicanal</li>
+            <li data-t="plan3_f4">Equipe dedicada</li>
+            <li data-t="plan3_f5">Reuniões estratégicas</li>
+            <li data-t="plan3_f6">SLA garantido</li>
           </ul>
-          <a href="https://wa.me/5562984924326?text=Ol%C3%A1!%20Quero%20conhecer%20o%20Enterprise%20da%20Ouro%20Digital%20%F0%9F%92%B0"
-             class="plan-btn" target="_blank" rel="noopener">Falar com especialista</a>
+          <a href="https://wa.me/5562984924326?text=Quero%20conhecer%20o%20Enterprise%20%F0%9F%92%B0"
+             class="plan-btn" target="_blank" rel="noopener" data-t="plan3_talk">Falar com especialista</a>
         </div>
 
       </div>
@@ -324,28 +384,32 @@
 
   <!-- SOBRE -->
   <section id="sobre">
-    <div class="wrap sobre-wrap">
+    <div class="wrap sobre-grid">
       <div class="sobre-text" data-reveal>
-        <span class="label">Quem somos</span>
-        <h2>A agência que<br/><em>Conecta Riquezas</em></h2>
-        <p>Fundada em 2018, a Ouro Digital nasceu com um propósito claro: alavancar empresas de todos os portes com estratégias digitais de alto impacto.</p>
-        <p>Com escritório próprio no <strong>centro de Goiânia</strong> e mais de <strong>5.000 empresas atendidas</strong> em todo o Brasil, somos uma agência séria, consolidada e obcecada com resultado.</p>
-        <p>Nossa equipe une especialistas em tráfego, desenvolvedores, filmmakers e especialistas em IA — entregando tudo com <strong>agilidade de 3 dias úteis</strong>.</p>
-        <div class="sobre-pills">
-          <span>🏢 Centro de Goiânia</span>
-          <span>⚡ 3 dias úteis</span>
-          <span>🤖 IA Real</span>
-          <span>📊 Resultados mensuráveis</span>
+        <div class="sec-label" data-t="about_label">Quem somos</div>
+        <h2 data-t-html="about_h2">A agência que <em>Conecta Riquezas</em></h2>
+        <p data-t="about_p1">Fundada em 2018, a Ouro Digital nasceu com um propósito claro: alavancar empresas de todos os portes com estratégias digitais de alto impacto.</p>
+        <p data-t="about_p2">Com escritório próprio no <strong>centro de Goiânia</strong> e mais de <strong>5.000 empresas atendidas</strong> em todo o Brasil, somos uma agência séria, consolidada e obcecada com resultado.</p>
+        <div class="sobre-tags">
+          <span data-t="about_tag1">🏢 Centro de Goiânia</span>
+          <span data-t="about_tag2">⚡ 3 dias úteis</span>
+          <span data-t="about_tag3">🤖 IA Real</span>
+          <span data-t="about_tag4">📊 Resultados</span>
         </div>
-        <a href="https://wa.me/5562984924326?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Ouro%20Digital%20%F0%9F%92%B0"
-           class="btn-gold" target="_blank" rel="noopener" style="margin-top:32px;display:inline-flex;">
+        <a href="https://wa.me/5562984924326?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20a%20Ouro%20Digital"
+           class="btn-primary" target="_blank" rel="noopener" data-t="about_cta" style="margin-top:28px;display:inline-flex;">
           Falar com a equipe →
         </a>
       </div>
-      <div class="sobre-logo-wrap" data-reveal>
-        <div class="sobre-logo-card">
-          <img src="assets/logo.png" alt="Ouro Digital" class="sobre-logo-img"/>
-          <p class="sobre-tagline">Desde 2018 · Goiânia · Todo o Brasil</p>
+      <div class="sobre-visual" data-reveal>
+        <div class="about-card">
+          <img src="assets/logo.png" alt="Ouro Digital" class="about-logo"/>
+          <p class="about-sub" data-t="about_since">Desde 2018 · Goiânia · Todo o Brasil</p>
+          <div class="about-numbers">
+            <div><b>2018</b><span data-t="about_founded">Fundação</span></div>
+            <div><b>5k+</b><span data-t="about_companies">Empresas</span></div>
+            <div><b>GO</b><span data-t="about_city">Goiânia</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -353,66 +417,67 @@
 
   <!-- CTA FINAL -->
   <section id="cta">
+    <canvas id="ctaCanvas"></canvas>
     <div class="wrap">
-      <div class="cta-box" data-reveal>
-        <img src="assets/logo.png" alt="Ouro Digital" class="cta-logo"/>
-        <h2>Pronto para levar<br/><em>sua empresa ao próximo nível?</em></h2>
-        <p>Solicite sua avaliação gratuita agora. Nossa equipe vai analisar o seu negócio e montar uma estratégia personalizada para você.</p>
-        <a href="https://wa.me/5562984924326?text=Ol%C3%A1!%20Quero%20solicitar%20minha%20avalia%C3%A7%C3%A3o%20gratuita%20na%20Ouro%20Digital%20%F0%9F%92%B0"
-           class="btn-gold btn-lg" target="_blank" rel="noopener">
+      <div class="cta-inner" data-reveal>
+        <div class="sec-label" data-t="cta_label">Pronto para crescer?</div>
+        <h2 data-t-html="cta_h2">Crie o seu site conosco agora,<br/><em>em minutos.</em></h2>
+        <p data-t="cta_p">Solicite sua avaliação gratuita. Nossa equipe analisa o seu negócio e monta a estratégia personalizada.</p>
+        <a href="https://wa.me/5562984924326?text=Ol%C3%A1%21%20Quero%20solicitar%20minha%20avalia%C3%A7%C3%A3o%20gratuita%20%F0%9F%92%B0"
+           class="btn-cta-hero" target="_blank" rel="noopener" data-t="cta_btn">
           📲 Solicitar avaliação gratuita
         </a>
-        <p class="cta-sub">Vagas limitadas · Goiânia e todo o Brasil</p>
+        <p class="cta-note" data-t="cta_note">Vagas limitadas · Atendemos Brasil todo</p>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer id="footer">
-    <div class="wrap footer-wrap">
-      <div class="footer-left">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
         <img src="assets/logo.png" alt="Ouro Digital" class="footer-logo"/>
-        <p>Agência de marketing digital fundada em 2018.<br/>Conectando riquezas em todo o Brasil.</p>
-        <div class="footer-social">
-          <a href="https://wa.me/5562984924326" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <p data-t="footer_desc">Agência de marketing digital fundada em 2018. Conectando riquezas em todo o Brasil.</p>
+        <div class="footer-socials">
+          <a href="https://wa.me/5562984924326" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           </a>
-          <a href="https://instagram.com/ourodigital_ig" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <a href="https://instagram.com/ourodigital_ig" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
         </div>
       </div>
-      <div class="footer-links">
-        <h6>Navegação</h6>
-        <a href="#solucoes">Soluções</a>
-        <a href="#portfolio">Portfólio</a>
-        <a href="#planos">Planos</a>
-        <a href="#sobre">Sobre</a>
+      <div class="footer-col">
+        <h6 data-t="footer_nav">Navegação</h6>
+        <a href="#solucoes" data-t="nav_sol">Soluções</a>
+        <a href="#portfolio" data-t="nav_port">Portfólio</a>
+        <a href="#planos" data-t="nav_plans">Planos</a>
+        <a href="#sobre" data-t="nav_about">Sobre</a>
       </div>
-      <div class="footer-links">
-        <h6>Serviços</h6>
-        <a href="#solucoes">Tráfego Pago</a>
-        <a href="#solucoes">Criação de Sites</a>
-        <a href="#solucoes">Automação IA</a>
-        <a href="#solucoes">Social Media</a>
+      <div class="footer-col">
+        <h6 data-t="footer_services">Serviços</h6>
+        <a href="#solucoes" data-t="sol1_h">Tráfego Pago</a>
+        <a href="#solucoes" data-t="sol2_h">Sites & Landing Pages</a>
+        <a href="#solucoes" data-t="sol3_h">Automação de IA</a>
+        <a href="#solucoes" data-t="sol4_h">Social Media IA</a>
       </div>
-      <div class="footer-contact">
-        <h6>Contato</h6>
+      <div class="footer-col">
+        <h6 data-t="footer_contact">Contato</h6>
         <a href="https://wa.me/5562984924326" target="_blank" rel="noopener">📲 (62) 98492-4326</a>
         <a href="https://instagram.com/ourodigital_ig" target="_blank" rel="noopener">📸 @ourodigital_ig</a>
-        <p>📍 Centro de Goiânia, GO</p>
+        <p>📍 Centro · Goiânia, GO</p>
       </div>
     </div>
     <div class="footer-bar">
-      <span>© 2026 Ouro Digital · Todos os direitos reservados</span>
-      <span>Conectando Riquezas · Goiânia, GO</span>
+      <span>© 2026 Ouro Digital</span>
+      <span data-t="footer_tagline">Conectando Riquezas · Goiânia, GO</span>
     </div>
   </footer>
 
-  <!-- WPP FLUTUANTE -->
-  <a href="https://wa.me/5562984924326?text=Ol%C3%A1!%20Quero%20solicitar%20minha%20avalia%C3%A7%C3%A3o%20gratuita%20na%20Ouro%20Digital%20%F0%9F%92%B0"
+  <!-- WPP FLOAT -->
+  <a href="https://wa.me/5562984924326?text=Ol%C3%A1%21%20Quero%20solicitar%20minha%20avalia%C3%A7%C3%A3o%20gratuita%20%F0%9F%92%B0"
      class="wpp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
   </a>
