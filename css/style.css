@@ -377,6 +377,88 @@ body:not(:hover) #cursor{opacity:0}
 .plan-btn-gold{background:var(--gold);color:#000!important;border-color:var(--gold)!important}
 .plan-btn-gold:hover{background:var(--gold-l)!important;transform:translateY(-1px)}
 
+/* ── FUNDADORES ── */
+#fundadores{padding:120px 0;background:var(--bg2);border-top:1px solid var(--border)}
+.founders-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+
+.founder-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:20px;overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:border-color .3s,box-shadow .3s;
+}
+.founder-card:hover{border-color:var(--gold-line);box-shadow:0 24px 60px rgba(0,0,0,.3)}
+
+.founder-photo-wrap{
+  position:relative;height:260px;
+  background:linear-gradient(135deg,#060012 0%,#1a1200 60%,rgba(201,168,76,.15) 100%);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+  border-bottom:1px solid var(--border);
+}
+.founder-initials{
+  font-family:var(--font);font-size:5rem;font-weight:800;
+  color:rgba(201,168,76,.3);letter-spacing:-2px;
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  pointer-events:none;
+}
+.founder-photo{
+  width:160px;height:160px;border-radius:50%;
+  object-fit:cover;border:3px solid var(--gold-line);
+  box-shadow:0 0 40px rgba(201,168,76,.2);
+  position:relative;z-index:2;
+}
+.founder-badge-role{
+  position:absolute;bottom:16px;left:50%;transform:translateX(-50%);
+  background:var(--gold);color:#000;
+  font-family:var(--font);font-size:.62rem;font-weight:800;
+  letter-spacing:1.5px;text-transform:uppercase;
+  padding:5px 18px;border-radius:100px;white-space:nowrap;
+  z-index:3;
+}
+
+.founder-body{padding:28px 28px 32px;display:flex;flex-direction:column;gap:16px;flex:1}
+.founder-body h3{font-family:var(--font);font-size:1.6rem;font-weight:800;color:var(--text);line-height:1}
+.founder-title{font-size:.78rem;color:var(--gold);font-weight:600;letter-spacing:.5px;margin-top:-8px}
+.founder-bio{font-size:.875rem;color:var(--muted);line-height:1.72}
+
+.founder-badges{display:flex;flex-wrap:wrap;gap:8px}
+.fbadge{
+  background:var(--gold-glow);border:1px solid var(--gold-line);
+  color:var(--gold);border-radius:6px;
+  font-size:.7rem;font-weight:700;padding:5px 10px;
+  letter-spacing:.3px;
+}
+
+.founder-team{
+  font-size:.78rem;color:var(--muted);line-height:1.5;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:8px;padding:12px 14px;
+}
+.fteam-label{color:var(--gold);font-weight:600;display:block;margin-bottom:4px;font-size:.72rem;letter-spacing:1px;text-transform:uppercase}
+
+.founder-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:8px}
+.founder-wpp{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#25d366;color:#000;
+  font-size:.78rem;font-weight:700;padding:10px 16px;border-radius:7px;
+  transition:background .2s,transform .2s;
+}
+.founder-wpp:hover{background:#20c05a;transform:translateY(-1px)}
+.founder-ig{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
+  color:#fff;font-size:.78rem;font-weight:700;
+  padding:10px 16px;border-radius:7px;
+  transition:opacity .2s,transform .2s;
+}
+.founder-ig:hover{opacity:.88;transform:translateY(-1px)}
+
+@media(max-width:768px){
+  .founders-grid{grid-template-columns:1fr}
+  .founder-photo-wrap{height:220px}
+}
+
 /* ── SOBRE ── */
 #sobre{padding:120px 0;background:var(--bg2);border-top:1px solid var(--border)}
 .sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
