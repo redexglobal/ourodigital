@@ -27,18 +27,18 @@ const T = {
     sol6_h:'Software Sob Medida',
     sol6_p:'Sistemas personalizados para qualquer porte — do açougue à clínica odontológica.',
     port_label:'Portfólio', port_h2:'Sites que já <em>entregamos</em>',
-    port_sub:'Cada projeto é único. Deslize para ver todos.',
-    port_cat_ecom:'E-Commerce · Luxo',
-    port1_p:'iPhones banhados a ouro 24KT. Multilíngue PT/EN/AR.',
-    port2_p:'Produtos para barba. Design focado em conversão.',
-    port3_p:'ONG comunitária. Captação de voluntários.',
-    port4_p:'Açougue premium com catálogo e pedido via WPP.',
-    port5_p:'Barbearia masculina com agendamento online.',
-    port6_p:'Painel de preços dinâmico para televisão.',
-    port7_p:'Projeto social em Goiânia. Missão e eventos.',
-    port8_p:'Agência de marketing digital e branding.',
+    port_sub:'Cada projeto foi construído do zero, com identidade própria, copy, design e integração completa.',
+    port1_desc:'Site de e-commerce de luxo para venda de iPhones e Apple Watches banhados a ouro 24 quilates. Empresa brasileira com entrega em todo o país e operação internacional voltada ao mercado árabe.',
+    port2_desc:'E-commerce especializado em produtos para crescimento de barba e cabelo. Layout focado em conversão com depoimentos, seção de benefícios e integração direta com WhatsApp para vendas.',
+    port3_desc:'Site institucional para ONG comunitária de solidariedade em Goiânia. Foco em captação de voluntários, doações e divulgação das ações sociais da organização para ampliar o alcance da missão.',
+    port4_desc:'Site completo para açougue premium com catálogo de cortes nobres, frutaria, verdurão, bebidas e temperos. Sistema de pedidos integrado ao WhatsApp com seleção de produtos e envio automático do carrinho.',
+    port5_desc:'Site premium para barbearia masculina com galeria de cortes, serviços disponíveis e agendamento via WhatsApp. Identidade visual forte que transmite profissionalismo e exclusividade ao cliente.',
+    port6_desc:'Painel de preços dinâmico desenvolvido para exibição em televisão dentro do supermercado. Atualização de preços em tempo real, categorias customizáveis e layout otimizado para telas grandes.',
+    port7_desc:'Site institucional para projeto social em Goiânia. Apresenta a missão, equipe, galeria de eventos e formulário de adesão para voluntários e parceiros que desejam apoiar a causa.',
+    port8_desc:'Site institucional de agência de marketing digital com apresentação completa de serviços, portfólio de clientes, depoimentos e captação de leads via WhatsApp. Identidade de marca forte e moderna.',
     port_btn:'Ver site →',
-    port_cta_text:'Quer um site para o seu negócio?',
+    port_cta_h:'Quer um site como esses<br/>para o seu negócio?',
+    port_cta_sub:'Entregamos em até 3 dias úteis. Avaliação gratuita.',
     port_cta_btn:'Criar meu site agora →',
     plans_label:'Investimento',
     plans_h2:'Planos que <em>fazem sua empresa crescer</em>',
@@ -108,18 +108,18 @@ const T = {
     sol6_h:'Custom Software',
     sol6_p:'Personalized systems for any size business.',
     port_label:'Portfolio', port_h2:'Sites we have <em>delivered</em>',
-    port_sub:'Each project is unique. Slide to see all.',
-    port_cat_ecom:'E-Commerce · Luxury',
-    port1_p:'24KT gold-plated iPhones. Multilingual PT/EN/AR.',
-    port2_p:'Beard products. Conversion-focused design.',
-    port3_p:'Community NGO. Volunteer recruitment.',
-    port4_p:'Premium butcher shop with catalog and WhatsApp orders.',
-    port5_p:'Barbershop with online scheduling.',
-    port6_p:'Dynamic price display panel for TV screens.',
-    port7_p:'Social project in Goiânia. Mission and events.',
-    port8_p:'Digital marketing agency and branding.',
+    port_sub:'Each project was built from scratch with its own identity, copy, design and full integration.',
+    port1_desc:'Luxury e-commerce for selling iPhones and Apple Watches plated in 24-karat gold. Brazilian company delivering nationwide with international operations targeting the Arab market.',
+    port2_desc:'E-commerce specializing in beard and hair growth products. Conversion-focused layout with testimonials, benefits section and direct WhatsApp integration for sales.',
+    port3_desc:'Institutional site for a community solidarity NGO in Goiânia. Focused on recruiting volunteers, donations and spreading the organization\'s social activities to expand mission reach.',
+    port4_desc:'Complete site for a premium butcher shop with catalog of noble cuts, fruit, greengrocer, beverages and seasonings. WhatsApp-integrated order system with product selection and automatic cart delivery.',
+    port5_desc:'Premium site for a men\'s barbershop with haircut gallery, available services and WhatsApp scheduling. Strong visual identity conveying professionalism and exclusivity.',
+    port6_desc:'Dynamic price panel built for in-store television display. Real-time price updates, customizable categories and layout optimized for large screens.',
+    port7_desc:'Institutional site for a social project in Goiânia. Presents the mission, team, event gallery and sign-up form for volunteers and partners who want to support the cause.',
+    port8_desc:'Institutional site for a digital marketing agency with full service presentation, client portfolio, testimonials and lead capture via WhatsApp. Strong, modern brand identity.',
     port_btn:'View site →',
-    port_cta_text:'Want a website for your business?',
+    port_cta_h:'Want a site like these<br/>for your business?',
+    port_cta_sub:'Delivered in up to 3 business days. Free evaluation.',
     port_cta_btn:'Create my site now →',
     plans_label:'Investment',
     plans_h2:'Plans that <em>grow your business</em>',
@@ -397,7 +397,7 @@ const SCENES = {
     });
     /* rising numbers */
     if (hover) {
-      ctx.font = `bold 11px Syne,sans-serif`;
+      ctx.font = `bold 11px Manrope,sans-serif`;
       ctx.fillStyle = 'rgba(201,168,76,.8)';
       const n = Math.floor((t*.3) % 999);
       ctx.fillText(`+${n}%`, W*.6, 20);
@@ -562,58 +562,6 @@ window.addEventListener('resize', () => {
     c.height = c.offsetHeight || 180;
   });
 });
-
-/* ── PORTFOLIO SLIDER ── */
-const track = document.querySelector('.slider-track');
-const dotsWrap = document.getElementById('sliderDots');
-const cards = document.querySelectorAll('.slide-card');
-const VISIBLE = () => window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
-let current = 0, autoTimer, isDragging = false, startX = 0, dragX = 0;
-
-function totalSlides() { return Math.max(1, cards.length - VISIBLE() + 1); }
-
-function buildDots() {
-  if (!dotsWrap) return;
-  dotsWrap.innerHTML = '';
-  Array.from({length: totalSlides()}, (_,i) => {
-    const d = document.createElement('button');
-    d.className = 'dot' + (i===current ? ' active' : '');
-    d.addEventListener('click', () => goTo(i));
-    dotsWrap.appendChild(d);
-  });
-}
-
-function goTo(n) {
-  current = Math.max(0, Math.min(n, totalSlides()-1));
-  const cardW = (cards[0]?.offsetWidth || 300) + 20;
-  track.style.transform = `translateX(-${current * cardW}px)`;
-  dotsWrap?.querySelectorAll('.dot').forEach((d,i) => d.classList.toggle('active', i===current));
-}
-
-function startAuto() { autoTimer = setInterval(() => goTo((current+1) % totalSlides()), 4000); }
-function stopAuto()  { clearInterval(autoTimer); }
-
-document.getElementById('sliderPrev')?.addEventListener('click', () => { stopAuto(); goTo(current-1); startAuto(); });
-document.getElementById('sliderNext')?.addEventListener('click', () => { stopAuto(); goTo(current+1); startAuto(); });
-
-/* Drag / touch */
-const tw = document.getElementById('sliderTrack');
-if (tw) {
-  const down = e => { isDragging=true; startX = e.touches?.[0].clientX ?? e.clientX; stopAuto(); };
-  const move = e => { if(!isDragging) return; dragX = (e.touches?.[0].clientX ?? e.clientX) - startX; };
-  const up   = () => {
-    if (!isDragging) return; isDragging=false;
-    if (dragX < -50) goTo(current+1); else if (dragX > 50) goTo(current-1);
-    dragX=0; startAuto();
-  };
-  tw.addEventListener('mousedown', down); tw.addEventListener('touchstart', down, {passive:true});
-  window.addEventListener('mousemove', move); window.addEventListener('touchmove', move, {passive:true});
-  window.addEventListener('mouseup', up);   window.addEventListener('touchend', up);
-}
-
-buildDots();
-startAuto();
-window.addEventListener('resize', () => { buildDots(); goTo(Math.min(current, totalSlides()-1)); });
 
 /* ── REVEAL ON SCROLL ── */
 const revEls = document.querySelectorAll('[data-reveal]');

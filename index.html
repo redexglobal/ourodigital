@@ -7,20 +7,19 @@
   <title>Ouro Digital – Conectando Riqueza</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
-  <!-- CURSOR -->
   <div id="cursor"></div>
   <div id="cursor-trail"></div>
 
   <!-- CONTROLS -->
   <div id="controls">
-    <button id="themeBtn" aria-label="Alternar tema">
-      <svg id="iconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      <svg id="iconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <button id="themeBtn" aria-label="Tema">
+      <svg id="iconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+      <svg id="iconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
     <button id="langBtn">PT</button>
   </div>
@@ -34,11 +33,10 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#solucoes" data-t="nav_sol">Soluções</a></li>
         <li><a href="#portfolio" data-t="nav_port">Portfólio</a></li>
-        <li><a href="#planos" data-t="nav_plans">Planos</a></li>
         <li><a href="#fundadores" data-t="nav_founders">Fundadores</a></li>
-        <li><a href="#sobre" data-t="nav_about">Sobre</a></li>
+        <li><a href="#planos" data-t="nav_plans">Planos</a></li>
         <li>
-          <a href="https://wa.me/5562984924326?text=Ol%C3%A1%21%20Quero%20criar%20meu%20site%20agora%20%F0%9F%92%BB"
+          <a href="https://wa.me/5562984924326?text=Ol%C3%A1!%20Quero%20criar%20meu%20site%20agora%20%F0%9F%92%BB"
              class="nav-cta" data-t="nav_cta" target="_blank" rel="noopener">
             Criar meu site agora
           </a>
@@ -53,29 +51,27 @@
   <!-- HERO -->
   <section id="hero">
     <canvas id="starfield"></canvas>
-    <div class="hero-logo-wrap" id="heroLogoWrap">
-      <img src="assets/logo.png" alt="Ouro Digital" id="heroLogo" class="hero-logo-bg"/>
+    <div class="hero-logo-wrap">
+      <img src="assets/logo.png" alt="" id="heroLogo" class="hero-logo-bg" aria-hidden="true"/>
     </div>
     <div class="hero-content">
       <div class="hero-pill" data-reveal>
         <span class="pill-dot"></span>
         <span data-t="hero_pill">Agência Digital · Goiânia · Desde 2018</span>
       </div>
-      <h1 class="hero-h1" data-reveal data-delay="120">
-        <span data-t-html="hero_h1">Sua empresa em <em>primeiro lugar</em> no digital.</span>
+      <h1 class="hero-h1" data-reveal data-delay="100">
+        <span data-t-html="hero_h1">Sua empresa em <em>primeiro lugar</em><br/>no digital.</span>
       </h1>
-      <p class="hero-sub" data-reveal data-delay="240">
-        <span data-t-html="hero_sub">Marketing, tráfego pago, sites e automações de IA.<br/>Entrega em até <strong>3 dias úteis</strong>.</span>
+      <p class="hero-sub" data-reveal data-delay="200">
+        <span data-t-html="hero_sub">Marketing, tráfego pago, sites e IA.<br/>Entrega em até <strong>3 dias úteis</strong>.</span>
       </p>
-      <div class="hero-btns" data-reveal data-delay="360">
-        <a href="https://wa.me/5562984924326?text=Ol%C3%A1%21%20Quero%20solicitar%20minha%20avalia%C3%A7%C3%A3o%20gratuita%20%F0%9F%92%B0"
-           class="btn-primary" target="_blank" rel="noopener" data-t="hero_cta1">
-          Solicitar avaliação gratuita
-        </a>
+      <div class="hero-btns" data-reveal data-delay="320">
+        <a href="https://wa.me/5562984924326?text=Ol%C3%A1!%20Quero%20minha%20avalia%C3%A7%C3%A3o%20gratuita%20%F0%9F%92%B0"
+           class="btn-primary" target="_blank" rel="noopener" data-t="hero_cta1">Solicitar avaliação gratuita</a>
         <a href="#portfolio" class="btn-ghost" data-t="hero_cta2">Ver portfólio ↓</a>
       </div>
     </div>
-    <div class="hero-stats" data-reveal data-delay="480">
+    <div class="hero-stats" data-reveal data-delay="440">
       <div class="hstat"><b>5.000+</b><span data-t="stat1">empresas atendidas</span></div>
       <div class="hstat-div"></div>
       <div class="hstat"><b>8 <span data-t="stat2_unit">anos</span></b><span data-t="stat2">de mercado</span></div>
@@ -88,7 +84,7 @@
 
   <!-- TICKER -->
   <div class="ticker-wrap">
-    <div class="ticker" id="ticker">
+    <div class="ticker">
       <span>Tráfego Pago</span><span class="tick-dot">◆</span>
       <span>Sites & Landing Pages</span><span class="tick-dot">◆</span>
       <span>Automação IA</span><span class="tick-dot">◆</span>
@@ -114,271 +110,256 @@
         <h2 data-t-html="sol_h2">Soluções que <em>geram resultado</em></h2>
       </header>
       <div class="sol-grid">
-
         <div class="sol-card" data-reveal data-service="trafego">
-          <div class="sol-canvas-wrap">
-            <canvas class="svc-canvas" data-scene="trafego"></canvas>
-          </div>
-          <div class="sol-body">
-            <div class="sol-num">01</div>
-            <h3 data-t="sol1_h">Tráfego Pago</h3>
-            <p data-t="sol1_p">Google, Meta e TikTok Ads. Campanhas que colocam sua marca no topo e geram clientes reais.</p>
-          </div>
+          <div class="sol-canvas-wrap"><canvas class="svc-canvas" data-scene="trafego"></canvas></div>
+          <div class="sol-body"><div class="sol-num">01</div><h3 data-t="sol1_h">Tráfego Pago</h3><p data-t="sol1_p">Google, Meta e TikTok Ads. Campanhas que colocam sua marca no topo e geram clientes reais.</p></div>
         </div>
-
         <div class="sol-card" data-reveal data-service="sites">
-          <div class="sol-canvas-wrap">
-            <canvas class="svc-canvas" data-scene="sites"></canvas>
-          </div>
-          <div class="sol-body">
-            <div class="sol-num">02</div>
-            <h3 data-t="sol2_h">Sites & Landing Pages</h3>
-            <p data-t="sol2_p">Do painel de preços para TV ao e-commerce de luxo. Entrega em até 3 dias úteis.</p>
-          </div>
+          <div class="sol-canvas-wrap"><canvas class="svc-canvas" data-scene="sites"></canvas></div>
+          <div class="sol-body"><div class="sol-num">02</div><h3 data-t="sol2_h">Sites & Landing Pages</h3><p data-t="sol2_p">Do painel de preços para TV ao e-commerce de luxo. Entrega em até 3 dias úteis.</p></div>
         </div>
-
         <div class="sol-card" data-reveal data-service="automacao">
-          <div class="sol-canvas-wrap">
-            <canvas class="svc-canvas" data-scene="automacao"></canvas>
-          </div>
-          <div class="sol-body">
-            <div class="sol-num">03</div>
-            <h3 data-t="sol3_h">Automação de IA</h3>
-            <p data-t="sol3_p">Atendimento inteligente no WhatsApp 24h por dia, 7 dias por semana.</p>
-          </div>
+          <div class="sol-canvas-wrap"><canvas class="svc-canvas" data-scene="automacao"></canvas></div>
+          <div class="sol-body"><div class="sol-num">03</div><h3 data-t="sol3_h">Automação de IA</h3><p data-t="sol3_p">Atendimento inteligente no WhatsApp 24h por dia, 7 dias por semana.</p></div>
         </div>
-
         <div class="sol-card" data-reveal data-service="social">
-          <div class="sol-canvas-wrap">
-            <canvas class="svc-canvas" data-scene="social"></canvas>
-          </div>
-          <div class="sol-body">
-            <div class="sol-num">04</div>
-            <h3 data-t="sol4_h">Social Media IA</h3>
-            <p data-t="sol4_p">90 posts mensais no Instagram com inteligência artificial. Presença constante.</p>
-          </div>
+          <div class="sol-canvas-wrap"><canvas class="svc-canvas" data-scene="social"></canvas></div>
+          <div class="sol-body"><div class="sol-num">04</div><h3 data-t="sol4_h">Social Media IA</h3><p data-t="sol4_p">90 posts mensais no Instagram com inteligência artificial. Presença constante.</p></div>
         </div>
-
         <div class="sol-card" data-reveal data-service="filmmaker">
-          <div class="sol-canvas-wrap">
-            <canvas class="svc-canvas" data-scene="filmmaker"></canvas>
-          </div>
-          <div class="sol-body">
-            <div class="sol-num">05</div>
-            <h3 data-t="sol5_h">Filmmaker & Conteúdo</h3>
-            <p data-t="sol5_p">Equipe criativa para vídeos, fotos e campanhas que convertem.</p>
-          </div>
+          <div class="sol-canvas-wrap"><canvas class="svc-canvas" data-scene="filmmaker"></canvas></div>
+          <div class="sol-body"><div class="sol-num">05</div><h3 data-t="sol5_h">Filmmaker & Conteúdo</h3><p data-t="sol5_p">Equipe criativa para vídeos, fotos e campanhas que convertem.</p></div>
         </div>
-
         <div class="sol-card" data-reveal data-service="software">
-          <div class="sol-canvas-wrap">
-            <canvas class="svc-canvas" data-scene="software"></canvas>
-          </div>
-          <div class="sol-body">
-            <div class="sol-num">06</div>
-            <h3 data-t="sol6_h">Software Sob Medida</h3>
-            <p data-t="sol6_p">Sistemas personalizados para qualquer porte — do açougue à clínica odontológica.</p>
-          </div>
+          <div class="sol-canvas-wrap"><canvas class="svc-canvas" data-scene="software"></canvas></div>
+          <div class="sol-body"><div class="sol-num">06</div><h3 data-t="sol6_h">Software Sob Medida</h3><p data-t="sol6_p">Sistemas personalizados para qualquer porte — do açougue à clínica odontológica.</p></div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- PORTFÓLIO -->
+  <!-- PORTFÓLIO FULL SCREEN -->
   <section id="portfolio">
-    <div class="wrap">
-      <header class="sec-head" data-reveal>
-        <div class="sec-label" data-t="port_label">Portfólio</div>
-        <h2 data-t-html="port_h2">Sites que já <em>entregamos</em></h2>
-        <p data-t="port_sub">Cada projeto é único. Deslize para ver todos.</p>
-      </header>
+    <div class="port-intro wrap" data-reveal>
+      <div class="sec-label" data-t="port_label">Portfólio</div>
+      <h2 data-t-html="port_h2">Sites que já <em>entregamos</em></h2>
+      <p data-t="port_sub">Cada projeto foi construído do zero, com identidade própria, copy, design e integração completa.</p>
     </div>
-    <div class="slider-outer">
-      <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Anterior">‹</button>
-      <div class="slider-track-wrap" id="sliderTrack">
-        <div class="slider-track">
 
-          <div class="slide-card">
-            <div class="slide-thumb" style="--gc1:#0a0a0a;--gc2:#2a1a00;--gc3:#D4AF37;">
-              <img src="assets/logos/ramiresvendas.jpg" alt="Ramires Vendas" class="slide-logo" onerror="this.style.display='none'"/>
-              <span class="slide-emoji-fb">📱</span>
-            </div>
-            <div class="slide-info">
-              <span class="slide-cat" data-t="port_cat_ecom">E-Commerce · Luxo</span>
-              <h4>Ramires Vendas</h4>
-              <p data-t="port1_p">iPhones banhados a ouro 24KT. Multilíngue PT/EN/AR.</p>
-              <a href="https://ramiresvendas.vercel.app" target="_blank" rel="noopener" class="slide-btn" data-t="port_btn">Ver site →</a>
+    <div class="port-cases">
+
+      <div class="port-case" data-reveal>
+        <div class="port-case-visual" style="--c1:#060008;--c2:#180e00;--c3:rgba(212,175,55,.18);">
+          <div class="port-case-num">01</div>
+          <div class="port-case-mockup">
+            <div class="mockup-bar"><span></span><span></span><span></span></div>
+            <div class="mockup-body" style="background:linear-gradient(135deg,#0a0a0a,#2a1a00);">
+              <img src="assets/logos/ramiresvendas.jpg" alt="Ramires Vendas" class="mockup-logo" onerror="this.style.display='none'"/>
+              <span class="mockup-emoji">📱</span>
             </div>
           </div>
-
-          <div class="slide-card">
-            <div class="slide-thumb" style="--gc1:#0d1a0d;--gc2:#1a3d1a;--gc3:#2ecc71;">
-              <div class="slide-brand-logo" style="color:#2ecc71;">RDM</div>
-            </div>
-            <div class="slide-info">
-              <span class="slide-cat">E-Commerce · Beleza</span>
-              <h4>Rei do Minoxidil</h4>
-              <p data-t="port2_p">Produtos para barba. Design focado em conversão.</p>
-              <a href="https://reidominoxidilgoiania.vercel.app" target="_blank" rel="noopener" class="slide-btn" data-t="port_btn">Ver site →</a>
-            </div>
-          </div>
-
-          <div class="slide-card">
-            <div class="slide-thumb" style="--gc1:#0a0520;--gc2:#1a0a3d;--gc3:#7c3aed;">
-              <div class="slide-brand-logo" style="color:#a78bfa;">❤️</div>
-            </div>
-            <div class="slide-info">
-              <span class="slide-cat">ONG · Social</span>
-              <h4>Coração na Rua</h4>
-              <p data-t="port3_p">ONG comunitária. Captação de voluntários.</p>
-              <a href="https://coracao-na-rua.vercel.app" target="_blank" rel="noopener" class="slide-btn" data-t="port_btn">Ver site →</a>
-            </div>
-          </div>
-
-          <div class="slide-card">
-            <div class="slide-thumb" style="--gc1:#1a0808;--gc2:#3d1010;--gc3:#e53e3e;">
-              <div class="slide-brand-logo" style="color:#fc8181;">🥩</div>
-            </div>
-            <div class="slide-info">
-              <span class="slide-cat">Alimentação · Delivery</span>
-              <h4>Samuca Carnes</h4>
-              <p data-t="port4_p">Açougue premium com catálogo e pedido via WPP.</p>
-              <a href="https://samuca-carnes.vercel.app" target="_blank" rel="noopener" class="slide-btn" data-t="port_btn">Ver site →</a>
-            </div>
-          </div>
-
-          <div class="slide-card">
-            <div class="slide-thumb" style="--gc1:#0a0a08;--gc2:#1a1808;--gc3:#d4a017;">
-              <div class="slide-brand-logo" style="color:#fbbf24;">✂️</div>
-            </div>
-            <div class="slide-info">
-              <span class="slide-cat">Serviços · Barbearia</span>
-              <h4>Barbearia Arantes</h4>
-              <p data-t="port5_p">Barbearia masculina com agendamento online.</p>
-              <a href="https://barbearia-arantes.vercel.app" target="_blank" rel="noopener" class="slide-btn" data-t="port_btn">Ver site →</a>
-            </div>
-          </div>
-
-          <div class="slide-card">
-            <div class="slide-thumb" style="--gc1:#080a1a;--gc2:#101a3d;--gc3:#3b82f6;">
-              <div class="slide-brand-logo" style="color:#60a5fa;">🛒</div>
-            </div>
-            <div class="slide-info">
-              <span class="slide-cat">Varejo · Painel TV</span>
-              <h4>Supermercado Treviso</h4>
-              <p data-t="port6_p">Painel de preços dinâmico para televisão.</p>
-              <a href="https://supermercado-treviso.vercel.app" target="_blank" rel="noopener" class="slide-btn" data-t="port_btn">Ver site →</a>
-            </div>
-          </div>
-
-          <div class="slide-card">
-            <div class="slide-thumb" style="--gc1:#0a1208;--gc2:#162010;--gc3:#22c55e;">
-              <div class="slide-brand-logo" style="color:#86efac;">🌱</div>
-            </div>
-            <div class="slide-info">
-              <span class="slide-cat">Social · Institucional</span>
-              <h4>Projeto Renascer</h4>
-              <p data-t="port7_p">Projeto social em Goiânia. Missão e eventos.</p>
-              <a href="https://projeto-renascer-goiania.vercel.app" target="_blank" rel="noopener" class="slide-btn" data-t="port_btn">Ver site →</a>
-            </div>
-          </div>
-
-          <div class="slide-card">
-            <div class="slide-thumb" style="--gc1:#080808;--gc2:#1a0808;--gc3:#f97316;">
-              <div class="slide-brand-logo" style="color:#fb923c;">🚀</div>
-            </div>
-            <div class="slide-info">
-              <span class="slide-cat">Agência · Branding</span>
-              <h4>Rede X Global</h4>
-              <p data-t="port8_p">Agência de marketing digital e branding.</p>
-              <a href="https://rede-xglobal.vercel.app" target="_blank" rel="noopener" class="slide-btn" data-t="port_btn">Ver site →</a>
-            </div>
-          </div>
-
+          <div class="port-case-url">ramiresvendas.vercel.app</div>
+        </div>
+        <div class="port-case-info">
+          <span class="port-case-cat">E-Commerce · Luxo · Multilíngue</span>
+          <h3>Ramires Vendas</h3>
+          <p data-t="port1_desc">Site de e-commerce de luxo para venda de iPhones e Apple Watches banhados a ouro 24 quilates. Empresa brasileira com entrega em todo o país e operação internacional voltada ao mercado árabe.</p>
+          <ul class="port-case-feats">
+            <li>Catálogo completo com 12 produtos exclusivos</li>
+            <li>Carrinho de compras com checkout via WhatsApp</li>
+            <li>Trilíngue: Português, Inglês e Árabe (RTL)</li>
+            <li>Tema escuro e claro com persistência</li>
+            <li>Certificado de autenticidade e branding premium</li>
+          </ul>
+          <a href="https://ramiresvendas.vercel.app" target="_blank" rel="noopener" class="port-case-btn">Acessar site →</a>
         </div>
       </div>
-      <button class="slider-btn slider-next" id="sliderNext" aria-label="Próximo">›</button>
-    </div>
-    <div class="slider-dots" id="sliderDots"></div>
 
-    <div class="wrap">
-      <div class="port-cta-bar" data-reveal>
-        <span data-t="port_cta_text">Quer um site para o seu negócio?</span>
-        <a href="https://wa.me/5562984924326?text=Ol%C3%A1%21%20Vi%20o%20portf%C3%B3lio%20da%20Ouro%20Digital%20e%20quero%20criar%20meu%20site%20%F0%9F%92%BB"
-           class="btn-primary" target="_blank" rel="noopener" data-t="port_cta_btn">
-          Criar meu site agora →
-        </a>
+      <div class="port-case port-case-rev" data-reveal>
+        <div class="port-case-visual" style="--c1:#060e06;--c2:#0a200a;--c3:rgba(46,204,113,.15);">
+          <div class="port-case-num">02</div>
+          <div class="port-case-mockup">
+            <div class="mockup-bar"><span></span><span></span><span></span></div>
+            <div class="mockup-body" style="background:linear-gradient(135deg,#0d1a0d,#1a3d1a);">
+              <div class="mockup-brand" style="color:#2ecc71;">RDM</div>
+            </div>
+          </div>
+          <div class="port-case-url">reidominoxidilgoiania.vercel.app</div>
+        </div>
+        <div class="port-case-info">
+          <span class="port-case-cat">E-Commerce · Saúde & Beleza</span>
+          <h3>Rei do Minoxidil</h3>
+          <p data-t="port2_desc">E-commerce especializado em produtos para crescimento de barba e cabelo. Layout focado em conversão com depoimentos, seção de benefícios e integração direta com WhatsApp para vendas.</p>
+          <ul class="port-case-feats">
+            <li>Catálogo de produtos com fotos e descrições</li>
+            <li>Seção de benefícios e depoimentos de clientes</li>
+            <li>Botão de compra direto no WhatsApp</li>
+            <li>Design responsivo mobile-first</li>
+          </ul>
+          <a href="https://reidominoxidilgoiania.vercel.app" target="_blank" rel="noopener" class="port-case-btn">Acessar site →</a>
+        </div>
       </div>
+
+      <div class="port-case" data-reveal>
+        <div class="port-case-visual" style="--c1:#08051a;--c2:#100830;--c3:rgba(124,58,237,.15);">
+          <div class="port-case-num">03</div>
+          <div class="port-case-mockup">
+            <div class="mockup-bar"><span></span><span></span><span></span></div>
+            <div class="mockup-body" style="background:linear-gradient(135deg,#0a0520,#1a0a3d);">
+              <div class="mockup-brand" style="color:#a78bfa;font-size:2.4rem;">❤️</div>
+            </div>
+          </div>
+          <div class="port-case-url">coracao-na-rua.vercel.app</div>
+        </div>
+        <div class="port-case-info">
+          <span class="port-case-cat">ONG · Terceiro Setor · Social</span>
+          <h3>Coração na Rua</h3>
+          <p data-t="port3_desc">Site institucional para ONG comunitária de solidariedade em Goiânia. Foco em captação de voluntários, doações e divulgação das ações sociais da organização para ampliar o alcance da missão.</p>
+          <ul class="port-case-feats">
+            <li>Apresentação da missão, visão e valores</li>
+            <li>Formulário de cadastro de voluntários</li>
+            <li>Galeria de ações sociais realizadas</li>
+            <li>Integração com WhatsApp para doações</li>
+          </ul>
+          <a href="https://coracao-na-rua.vercel.app" target="_blank" rel="noopener" class="port-case-btn">Acessar site →</a>
+        </div>
+      </div>
+
+      <div class="port-case port-case-rev" data-reveal>
+        <div class="port-case-visual" style="--c1:#120606;--c2:#280808;--c3:rgba(229,62,62,.15);">
+          <div class="port-case-num">04</div>
+          <div class="port-case-mockup">
+            <div class="mockup-bar"><span></span><span></span><span></span></div>
+            <div class="mockup-body" style="background:linear-gradient(135deg,#1a0808,#3d1010);">
+              <div class="mockup-brand" style="color:#fc8181;font-size:2.4rem;">🥩</div>
+            </div>
+          </div>
+          <div class="port-case-url">samuca-carnes.vercel.app</div>
+        </div>
+        <div class="port-case-info">
+          <span class="port-case-cat">Alimentação · Delivery · WhatsApp</span>
+          <h3>Samuca Carnes</h3>
+          <p data-t="port4_desc">Site completo para açougue premium com catálogo de cortes nobres, frutaria, verdurão, bebidas e temperos. Sistema de pedidos integrado ao WhatsApp com seleção de produtos e envio automático do carrinho.</p>
+          <ul class="port-case-feats">
+            <li>Catálogo com categorias: carnes, frutaria, bebidas</li>
+            <li>Destaques: costela gaúcha, picanha, cortes especiais</li>
+            <li>Pedidos via WhatsApp com carrinho automático</li>
+            <li>Design de apetite — cores quentes e vibrantes</li>
+          </ul>
+          <a href="https://samuca-carnes.vercel.app" target="_blank" rel="noopener" class="port-case-btn">Acessar site →</a>
+        </div>
+      </div>
+
+      <div class="port-case" data-reveal>
+        <div class="port-case-visual" style="--c1:#0a0900;--c2:#1a1600;--c3:rgba(212,160,23,.15);">
+          <div class="port-case-num">05</div>
+          <div class="port-case-mockup">
+            <div class="mockup-bar"><span></span><span></span><span></span></div>
+            <div class="mockup-body" style="background:linear-gradient(135deg,#0a0a08,#1a1808);">
+              <div class="mockup-brand" style="color:#fbbf24;font-size:2.4rem;">✂️</div>
+            </div>
+          </div>
+          <div class="port-case-url">barbearia-arantes.vercel.app</div>
+        </div>
+        <div class="port-case-info">
+          <span class="port-case-cat">Serviços · Barbearia · Agendamento</span>
+          <h3>Barbearia Arantes</h3>
+          <p data-t="port5_desc">Site premium para barbearia masculina com galeria de cortes, serviços disponíveis e agendamento via WhatsApp. Identidade visual forte que transmite profissionalismo e exclusividade ao cliente.</p>
+          <ul class="port-case-feats">
+            <li>Galeria de cortes e serviços realizados</li>
+            <li>Lista de serviços com preços e descrições</li>
+            <li>Agendamento direto pelo WhatsApp</li>
+            <li>Depoimentos e avaliações de clientes</li>
+          </ul>
+          <a href="https://barbearia-arantes.vercel.app" target="_blank" rel="noopener" class="port-case-btn">Acessar site →</a>
+        </div>
+      </div>
+
+      <div class="port-case port-case-rev" data-reveal>
+        <div class="port-case-visual" style="--c1:#060810;--c2:#0c1220;--c3:rgba(59,130,246,.15);">
+          <div class="port-case-num">06</div>
+          <div class="port-case-mockup">
+            <div class="mockup-bar"><span></span><span></span><span></span></div>
+            <div class="mockup-body" style="background:linear-gradient(135deg,#080a1a,#101a3d);">
+              <div class="mockup-brand" style="color:#60a5fa;font-size:2.4rem;">🛒</div>
+            </div>
+          </div>
+          <div class="port-case-url">supermercado-treviso.vercel.app</div>
+        </div>
+        <div class="port-case-info">
+          <span class="port-case-cat">Varejo · Tecnologia · Painel TV</span>
+          <h3>Supermercado Treviso</h3>
+          <p data-t="port6_desc">Painel de preços dinâmico desenvolvido para exibição em televisão dentro do supermercado. Atualização de preços em tempo real, categorias customizáveis e layout otimizado para telas grandes.</p>
+          <ul class="port-case-feats">
+            <li>Interface otimizada para TVs e monitores</li>
+            <li>Categorias: hortifruti, carnes, laticínios, bebidas</li>
+            <li>Atualização de preços em tempo real</li>
+            <li>Animações suaves entre os produtos</li>
+          </ul>
+          <a href="https://supermercado-treviso.vercel.app" target="_blank" rel="noopener" class="port-case-btn">Acessar site →</a>
+        </div>
+      </div>
+
+      <div class="port-case" data-reveal>
+        <div class="port-case-visual" style="--c1:#060e06;--c2:#0a1a0a;--c3:rgba(34,197,94,.15);">
+          <div class="port-case-num">07</div>
+          <div class="port-case-mockup">
+            <div class="mockup-bar"><span></span><span></span><span></span></div>
+            <div class="mockup-body" style="background:linear-gradient(135deg,#0a1208,#162010);">
+              <div class="mockup-brand" style="color:#86efac;font-size:2.4rem;">🌱</div>
+            </div>
+          </div>
+          <div class="port-case-url">projeto-renascer-goiania.vercel.app</div>
+        </div>
+        <div class="port-case-info">
+          <span class="port-case-cat">Social · Institucional · Goiânia</span>
+          <h3>Projeto Renascer</h3>
+          <p data-t="port7_desc">Site institucional para projeto social em Goiânia. Apresenta a missão, equipe, galeria de eventos e formulário de adesão para voluntários e parceiros que desejam apoiar a causa.</p>
+          <ul class="port-case-feats">
+            <li>Apresentação da equipe e liderança</li>
+            <li>Galeria de eventos e ações realizadas</li>
+            <li>Formulário de adesão e parceria</li>
+            <li>Cronograma de próximas atividades</li>
+          </ul>
+          <a href="https://projeto-renascer-goiania.vercel.app" target="_blank" rel="noopener" class="port-case-btn">Acessar site →</a>
+        </div>
+      </div>
+
+      <div class="port-case port-case-rev" data-reveal>
+        <div class="port-case-visual" style="--c1:#0a0606;--c2:#160a06;--c3:rgba(249,115,22,.15);">
+          <div class="port-case-num">08</div>
+          <div class="port-case-mockup">
+            <div class="mockup-bar"><span></span><span></span><span></span></div>
+            <div class="mockup-body" style="background:linear-gradient(135deg,#080808,#1a0808);">
+              <div class="mockup-brand" style="color:#fb923c;font-size:2.4rem;">🚀</div>
+            </div>
+          </div>
+          <div class="port-case-url">rede-xglobal.vercel.app</div>
+        </div>
+        <div class="port-case-info">
+          <span class="port-case-cat">Agência · Marketing Digital · Branding</span>
+          <h3>Rede X Global</h3>
+          <p data-t="port8_desc">Site institucional de agência de marketing digital com apresentação completa de serviços, portfólio de clientes, depoimentos e captação de leads via WhatsApp. Identidade de marca forte e moderna.</p>
+          <ul class="port-case-feats">
+            <li>Apresentação dos serviços da agência</li>
+            <li>Portfólio de clientes e cases de sucesso</li>
+            <li>Depoimentos e prova social</li>
+            <li>CTA estratégicos para captação de leads</li>
+          </ul>
+          <a href="https://rede-xglobal.vercel.app" target="_blank" rel="noopener" class="port-case-btn">Acessar site →</a>
+        </div>
+      </div>
+
     </div>
-  </section>
 
-  <!-- PLANOS -->
-  <section id="planos">
     <div class="wrap">
-      <header class="sec-head" data-reveal>
-        <div class="sec-label" data-t="plans_label">Investimento</div>
-        <h2 data-t-html="plans_h2">Planos que <em>fazem sua empresa crescer</em></h2>
-        <p data-t="plans_sub">A partir de R$ 1.000/mês. Tudo incluso.</p>
-      </header>
-      <div class="plans-grid">
-
-        <div class="plan" data-reveal>
-          <div class="plan-name" data-t="plan1_name">Essencial</div>
-          <div class="plan-price">
-            <small data-t="plan_from">a partir de</small>
-            <strong>R$ 1.000</strong>
-            <span data-t="plan_month">/mês</span>
-          </div>
-          <ul>
-            <li data-t="plan1_f1">90 posts mensais no Instagram</li>
-            <li data-t="plan1_f2">Gestão com IA automatizada</li>
-            <li data-t="plan1_f3">Identidade visual</li>
-            <li data-t="plan1_f4">Relatório mensal</li>
-            <li data-t="plan1_f5">Suporte via WhatsApp</li>
-          </ul>
-          <a href="https://wa.me/5562984924326?text=Quero%20o%20plano%20Essencial%20%F0%9F%92%B0"
-             class="plan-btn" target="_blank" rel="noopener" data-t="plan_start">Começar agora</a>
+      <div class="port-final-cta" data-reveal>
+        <div class="port-final-text">
+          <h3 data-t-html="port_cta_h">Quer um site como esses<br/>para o seu negócio?</h3>
+          <p data-t="port_cta_sub">Entregamos em até 3 dias úteis. Avaliação gratuita.</p>
         </div>
-
-        <div class="plan plan-gold" data-reveal>
-          <div class="plan-top-badge" data-t="plan_best">Mais escolhido</div>
-          <div class="plan-name" data-t="plan2_name">Profissional</div>
-          <div class="plan-price">
-            <small data-t="plan_from">a partir de</small>
-            <strong>R$ 2.500</strong>
-            <span data-t="plan_month">/mês</span>
-          </div>
-          <ul>
-            <li data-t="plan2_f1">Tudo do plano Essencial</li>
-            <li data-t="plan2_f2">Tráfego pago Google + Meta</li>
-            <li data-t="plan2_f3">Site profissional incluso</li>
-            <li data-t="plan2_f4">Automação WhatsApp IA</li>
-            <li data-t="plan2_f5">Filmmaker — 1 vídeo/mês</li>
-            <li data-t="plan2_f6">Entrega em 3 dias úteis</li>
-          </ul>
-          <a href="https://wa.me/5562984924326?text=Quero%20o%20plano%20Profissional%20%F0%9F%92%B0"
-             class="plan-btn plan-btn-gold" target="_blank" rel="noopener" data-t="plan_start">Começar agora</a>
-        </div>
-
-        <div class="plan" data-reveal>
-          <div class="plan-name" data-t="plan3_name">Enterprise</div>
-          <div class="plan-price">
-            <small data-t="plan3_consult">sob consulta</small>
-            <strong data-t="plan3_custom">Personalizado</strong>
-          </div>
-          <ul>
-            <li data-t="plan3_f1">Tudo do plano Profissional</li>
-            <li data-t="plan3_f2">Software sob medida</li>
-            <li data-t="plan3_f3">IA 24/7 multicanal</li>
-            <li data-t="plan3_f4">Equipe dedicada</li>
-            <li data-t="plan3_f5">Reuniões estratégicas</li>
-            <li data-t="plan3_f6">SLA garantido</li>
-          </ul>
-          <a href="https://wa.me/5562984924326?text=Quero%20conhecer%20o%20Enterprise%20%F0%9F%92%B0"
-             class="plan-btn" target="_blank" rel="noopener" data-t="plan3_talk">Falar com especialista</a>
-        </div>
-
+        <a href="https://wa.me/5562984924326?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20e%20quero%20criar%20meu%20site%20%F0%9F%92%BB"
+           class="btn-primary" target="_blank" rel="noopener" data-t="port_cta_btn">Criar meu site agora →</a>
       </div>
     </div>
   </section>
@@ -393,62 +374,54 @@
       </header>
       <div class="founders-grid">
 
-        <!-- VILSON MOTA -->
         <div class="founder-card" data-reveal>
           <div class="founder-photo-wrap">
-            <div class="founder-initials" id="photoVilson">VM</div>
-            <img src="assets/founders/vilson.jpg" alt="Vilson Mota" class="founder-photo" onerror="this.style.display='none'"/>
-            <div class="founder-badge-role">Co-CEO & Fundador</div>
+            <div class="founder-initials">VM</div>
+            <img src="assets/founders/vilson.jpg" alt="Vilson Mota" class="founder-photo"/>
+            <div class="founder-badge-role">Co-CEO &amp; Fundador</div>
           </div>
           <div class="founder-body">
             <h3>Vilson Mota</h3>
             <p class="founder-title" data-t="vilson_title">Especialista em Vendas · IA & Tech · Corretor</p>
-            <p class="founder-bio" data-t="vilson_bio">
-              Vendedor nato com presença em mais de 20 estados brasileiros. Ex-consultor da Porto Seguro Seguradora, corretor de imóveis em Goiânia e pioneiro em tecnologia DeFi na região. Certificado pela Anthropic — criadora do Claude Code — em IA aplicada e educação digital. Membro do time de elite do Cultura Builder.
-            </p>
+            <p class="founder-bio" data-t="vilson_bio">Vendedor nato com presença em mais de 20 estados brasileiros. Ex-consultor da Porto Seguro Seguradora, corretor de imóveis em Goiânia e pioneiro em tecnologia DeFi na região. Certificado pela Anthropic — criadora do Claude Code — em IA aplicada. Membro do time de elite do Cultura Builder.</p>
             <div class="founder-badges">
               <span class="fbadge">🤖 Anthropic · Claude Code</span>
               <span class="fbadge">🏆 Cultura Builder</span>
               <span class="fbadge">🏠 Corretor · Goiânia</span>
               <span class="fbadge">🛡️ Porto Seguro</span>
-              <span class="fbadge">₿ DeFi Pioneer · GO</span>
+              <span class="fbadge">₿ DeFi Pioneer</span>
             </div>
             <div class="founder-team">
               <span class="fteam-label" data-t="vilson_team_label">Time de elite:</span>
               <span>Kelvin Nascimento · Caio Vicentino · Deco Montenegro · Bruno Pessoa</span>
             </div>
             <div class="founder-actions">
-              <a href="https://wa.me/5562984452548?text=Ol%C3%A1%20Vilson!%20Vi%20a%20Ouro%20Digital%20e%20quero%20saber%20mais%20%F0%9F%92%B0"
-                 class="founder-wpp" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <a href="https://wa.me/5562984452548?text=Ol%C3%A1%20Vilson!%20Vi%20a%20Ouro%20Digital%20%F0%9F%92%B0" class="founder-wpp" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 (62) 98445-2548
               </a>
-              <a href="https://wa.me/5562984924326?text=Ol%C3%A1%20Vilson!%20Vi%20a%20Ouro%20Digital%20e%20quero%20saber%20mais%20%F0%9F%92%B0"
-                 class="founder-wpp" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <a href="https://wa.me/5562984924326?text=Ol%C3%A1%20Vilson!%20Vi%20a%20Ouro%20Digital%20%F0%9F%92%B0" class="founder-wpp" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 (62) 98492-4326
               </a>
-              <a href="https://instagram.com/motavilson" target="_blank" rel="noopener" class="founder-ig" id="igVilson">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <a href="https://instagram.com/motavilson" target="_blank" rel="noopener" class="founder-ig">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 @motavilson
               </a>
             </div>
           </div>
         </div>
 
-        <!-- MAX ARANTES -->
         <div class="founder-card" data-reveal>
           <div class="founder-photo-wrap">
-            <div class="founder-initials" id="photoMax">MA</div>
-            <img src="assets/founders/max.jpg" alt="Max Arantes" class="founder-photo" onerror="this.style.display='none'"/>
-            <div class="founder-badge-role">Co-CEO & Fundador</div>
+            <div class="founder-initials">MA</div>
+            <img src="assets/founders/max.jpg" alt="Max Arantes" class="founder-photo"/>
+            <div class="founder-badge-role">Co-CEO &amp; Fundador</div>
           </div>
           <div class="founder-body">
             <h3>Max Arantes</h3>
             <p class="founder-title" data-t="max_title">Especialista em Educação · Empreendedor · Palestrante</p>
-            <p class="founder-bio" data-t="max_bio">
-              Empreendedor com trajetória construída na transformação de vidas. Instrutor de cursos de barbearia há anos, formando profissionais em todo o Brasil. Palestrante reconhecido com experiência em palcos corporativos e eventos de empreendedorismo. Traz à Ouro Digital a visão prática de quem entende pessoas, equipes e resultados.
-            </p>
+            <p class="founder-bio" data-t="max_bio">Empreendedor com trajetória construída na transformação de vidas. Instrutor de cursos de barbearia há anos, formando profissionais em todo o Brasil. Palestrante reconhecido com experiência em palcos corporativos e eventos de empreendedorismo.</p>
             <div class="founder-badges">
               <span class="fbadge">✂️ Instrutor de Barbearia</span>
               <span class="fbadge">🎤 Palestrante</span>
@@ -456,13 +429,12 @@
               <span class="fbadge">🚀 Empreendedor Serial</span>
             </div>
             <div class="founder-actions">
-              <a href="https://wa.me/5511917949412?text=Ol%C3%A1%20Max!%20Vi%20a%20Ouro%20Digital%20e%20quero%20saber%20mais%20%F0%9F%92%B0"
-                 class="founder-wpp" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <a href="https://wa.me/5511917949412?text=Ol%C3%A1%20Max!%20Vi%20a%20Ouro%20Digital%20%F0%9F%92%B0" class="founder-wpp" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 (11) 91794-9412
               </a>
-              <a href="https://instagram.com/maxwellarantes" target="_blank" rel="noopener" class="founder-ig" id="igMax">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <a href="https://instagram.com/maxwellarantes" target="_blank" rel="noopener" class="founder-ig">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 @maxwellarantes
               </a>
             </div>
@@ -473,34 +445,33 @@
     </div>
   </section>
 
-  <!-- SOBRE -->
-  <section id="sobre">
-    <div class="wrap sobre-grid">
-      <div class="sobre-text" data-reveal>
-        <div class="sec-label" data-t="about_label">Quem somos</div>
-        <h2 data-t-html="about_h2">A agência que <em>Conecta Riquezas</em></h2>
-        <p data-t="about_p1">Fundada em 2018, a Ouro Digital nasceu com um propósito claro: alavancar empresas de todos os portes com estratégias digitais de alto impacto.</p>
-        <p data-t="about_p2">Com escritório próprio no <strong>centro de Goiânia</strong> e mais de <strong>5.000 empresas atendidas</strong> em todo o Brasil, somos uma agência séria, consolidada e obcecada com resultado.</p>
-        <div class="sobre-tags">
-          <span data-t="about_tag1">🏢 Centro de Goiânia</span>
-          <span data-t="about_tag2">⚡ 3 dias úteis</span>
-          <span data-t="about_tag3">🤖 IA Real</span>
-          <span data-t="about_tag4">📊 Resultados</span>
+  <!-- PLANOS -->
+  <section id="planos">
+    <div class="wrap">
+      <header class="sec-head" data-reveal>
+        <div class="sec-label" data-t="plans_label">Investimento</div>
+        <h2 data-t-html="plans_h2">Planos que <em>fazem sua empresa crescer</em></h2>
+        <p data-t="plans_sub">A partir de R$ 1.000/mês. Tudo incluso.</p>
+      </header>
+      <div class="plans-grid">
+        <div class="plan" data-reveal>
+          <div class="plan-name" data-t="plan1_name">Essencial</div>
+          <div class="plan-price"><small data-t="plan_from">a partir de</small><strong>R$ 1.000</strong><span data-t="plan_month">/mês</span></div>
+          <ul><li data-t="plan1_f1">90 posts mensais no Instagram</li><li data-t="plan1_f2">Gestão com IA automatizada</li><li data-t="plan1_f3">Identidade visual</li><li data-t="plan1_f4">Relatório mensal</li><li data-t="plan1_f5">Suporte via WhatsApp</li></ul>
+          <a href="https://wa.me/5562984924326?text=Quero%20o%20plano%20Essencial%20%F0%9F%92%B0" class="plan-btn" target="_blank" rel="noopener" data-t="plan_start">Começar agora</a>
         </div>
-        <a href="https://wa.me/5562984924326?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20a%20Ouro%20Digital"
-           class="btn-primary" target="_blank" rel="noopener" data-t="about_cta" style="margin-top:28px;display:inline-flex;">
-          Falar com a equipe →
-        </a>
-      </div>
-      <div class="sobre-visual" data-reveal>
-        <div class="about-card">
-          <img src="assets/logo.png" alt="Ouro Digital" class="about-logo"/>
-          <p class="about-sub" data-t="about_since">Desde 2018 · Goiânia · Todo o Brasil</p>
-          <div class="about-numbers">
-            <div><b>2018</b><span data-t="about_founded">Fundação</span></div>
-            <div><b>5k+</b><span data-t="about_companies">Empresas</span></div>
-            <div><b>GO</b><span data-t="about_city">Goiânia</span></div>
-          </div>
+        <div class="plan plan-gold" data-reveal>
+          <div class="plan-top-badge" data-t="plan_best">Mais escolhido</div>
+          <div class="plan-name" data-t="plan2_name">Profissional</div>
+          <div class="plan-price"><small data-t="plan_from">a partir de</small><strong>R$ 2.500</strong><span data-t="plan_month">/mês</span></div>
+          <ul><li data-t="plan2_f1">Tudo do plano Essencial</li><li data-t="plan2_f2">Tráfego pago Google + Meta</li><li data-t="plan2_f3">Site profissional incluso</li><li data-t="plan2_f4">Automação WhatsApp IA</li><li data-t="plan2_f5">Filmmaker — 1 vídeo/mês</li><li data-t="plan2_f6">Entrega em 3 dias úteis</li></ul>
+          <a href="https://wa.me/5562984924326?text=Quero%20o%20plano%20Profissional%20%F0%9F%92%B0" class="plan-btn plan-btn-gold" target="_blank" rel="noopener" data-t="plan_start">Começar agora</a>
+        </div>
+        <div class="plan" data-reveal>
+          <div class="plan-name" data-t="plan3_name">Enterprise</div>
+          <div class="plan-price"><small data-t="plan3_consult">sob consulta</small><strong data-t="plan3_custom">Personalizado</strong></div>
+          <ul><li data-t="plan3_f1">Tudo do plano Profissional</li><li data-t="plan3_f2">Software sob medida</li><li data-t="plan3_f3">IA 24/7 multicanal</li><li data-t="plan3_f4">Equipe dedicada</li><li data-t="plan3_f5">Reuniões estratégicas</li><li data-t="plan3_f6">SLA garantido</li></ul>
+          <a href="https://wa.me/5562984924326?text=Quero%20o%20Enterprise%20%F0%9F%92%B0" class="plan-btn" target="_blank" rel="noopener" data-t="plan3_talk">Falar com especialista</a>
         </div>
       </div>
     </div>
@@ -514,10 +485,8 @@
         <div class="sec-label" data-t="cta_label">Pronto para crescer?</div>
         <h2 data-t-html="cta_h2">Crie o seu site conosco agora,<br/><em>em minutos.</em></h2>
         <p data-t="cta_p">Solicite sua avaliação gratuita. Nossa equipe analisa o seu negócio e monta a estratégia personalizada.</p>
-        <a href="https://wa.me/5562984924326?text=Ol%C3%A1%21%20Quero%20solicitar%20minha%20avalia%C3%A7%C3%A3o%20gratuita%20%F0%9F%92%B0"
-           class="btn-cta-hero" target="_blank" rel="noopener" data-t="cta_btn">
-          📲 Solicitar avaliação gratuita
-        </a>
+        <a href="https://wa.me/5562984924326?text=Ol%C3%A1!%20Quero%20minha%20avalia%C3%A7%C3%A3o%20gratuita%20%F0%9F%92%B0"
+           class="btn-cta-hero" target="_blank" rel="noopener" data-t="cta_btn">📲 Solicitar avaliação gratuita</a>
         <p class="cta-note" data-t="cta_note">Vagas limitadas · Atendemos Brasil todo</p>
       </div>
     </div>
@@ -531,10 +500,10 @@
         <p data-t="footer_desc">Agência de marketing digital fundada em 2018. Conectando riquezas em todo o Brasil.</p>
         <div class="footer-socials">
           <a href="https://wa.me/5562984924326" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           </a>
           <a href="https://instagram.com/ourodigital_ig" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
         </div>
       </div>
@@ -542,8 +511,8 @@
         <h6 data-t="footer_nav">Navegação</h6>
         <a href="#solucoes" data-t="nav_sol">Soluções</a>
         <a href="#portfolio" data-t="nav_port">Portfólio</a>
+        <a href="#fundadores" data-t="nav_founders">Fundadores</a>
         <a href="#planos" data-t="nav_plans">Planos</a>
-        <a href="#sobre" data-t="nav_about">Sobre</a>
       </div>
       <div class="footer-col">
         <h6 data-t="footer_services">Serviços</h6>
@@ -565,12 +534,9 @@
     </div>
   </footer>
 
-  <!-- WPP FLOAT -->
-  <a href="https://wa.me/5562984924326?text=Ol%C3%A1%21%20Quero%20solicitar%20minha%20avalia%C3%A7%C3%A3o%20gratuita%20%F0%9F%92%B0"
+  <a href="https://wa.me/5562984924326?text=Ol%C3%A1!%20Quero%20minha%20avalia%C3%A7%C3%A3o%20gratuita%20%F0%9F%92%B0"
      class="wpp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
+    <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
   <script src="js/main.js"></script>
