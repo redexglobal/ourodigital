@@ -1,1 +1,9 @@
 .vercel
+.env*
+!.env.example
+!.env.exemplo
+!.env.sample
+.DS_Store
+*.pem
+*.key
+id_rsa
